@@ -10,6 +10,10 @@ class Produto(models.Model):
     qtde = models.IntegerField(null=True, blank=False)
     fornecedor = models.CharField(max_length=50, blank=False)
 
+    def __str__(self):
+        return self.name
+
+
 
 
 # Create your models here.
