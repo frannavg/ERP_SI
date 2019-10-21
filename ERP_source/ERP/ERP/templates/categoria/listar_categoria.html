@@ -1,0 +1,33 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;
+  background-color: #f1f1c1;
+}
+</style>
+
+<div>
+    <h1><a href="/categoria/">Categoria</a></h1>
+</div>
+
+<div>
+<table style="width:100%">
+  <tr BGCOLOR=SlateBlue>
+    <th>Codigo</th>
+    <th>Nome</th>
+  </tr>
+  {% for c in categoria %}
+  <tr>
+    <td>{{c.codigoCategoria}}</td>
+    <td>{{ c.name}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
