@@ -1,10 +1,43 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;
+  background-color: #f1f1c1;
+}
+</style>
+
 <div>
     <h1><a href="/produto/">Produto</a></h1>
 </div>
 
-{% for p in produto %}
-    <div>
-        <p>nome: {{ p.name }}</p>
-        <p>preço de venda: {{ p.precoVenda }}</p>
-    </div>
-{% endfor %}
+<div>
+<table style="width:100%">
+  <tr BGCOLOR=SlateBlue>
+    <th>Codigo</th>
+    <th>Nome</th>
+    <th>Categoria</th>
+    <th>Preço de Compra</th>
+    <th>Preço de Venda</th>
+    <th>Quantidade</th>
+    <th>Fornecedor</th>
+  </tr>
+  {% for p in produto %}
+  <tr>
+    <td>{{p.codigoProduto}}</td>
+    <td>{{ p.name}}</td>
+    <td>{{ p.fkCategoria}}</td>
+    <td>{{ p.precoCompra}}</td>
+    <td>{{ p.precoVenda}}</td>
+    <td>{{ p.qtde}}</td>
+    <td>{{ p.fornecedor}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
