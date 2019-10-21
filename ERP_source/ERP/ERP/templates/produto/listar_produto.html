@@ -1,0 +1,10 @@
+<div>
+    <h1><a href="/produto/">Produto</a></h1>
+</div>
+
+{% for p in produto %}
+    <div>
+        <p>nome: {{ p.name }}</p>
+        <p>preço de venda: {{ p.precoVenda }}</p>
+    </div>
+{% endfor %}

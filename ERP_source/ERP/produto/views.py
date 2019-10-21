@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Produto
 
 def post_list(request):
- return HttpResponse('Olá Mundo!')
+ return render(request, "produto/produto.html")
 
 def lista_produto(request):
     # Primeiro, buscamos os funcionarios
@@ -15,7 +15,7 @@ def lista_produto(request):
     }
 
     # Retornamos o template no qual os funcionários serão dispostos
-    #return render(request, "templates/produto.html", contexto)
-    return HttpResponse('teste4')
+    return render(request, "produto/listar_produto.html", contexto)
+    #return HttpResponse('teste4')
 
 # Create your views here.
