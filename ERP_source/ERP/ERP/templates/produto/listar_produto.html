@@ -38,6 +38,7 @@ table#t01 {
       <th>Preço de Venda</th>
       <th>Quantidade</th>
       <th>Fornecedor</th>
+      <th>Data da Compra</th>
     </tr>
     {% for p in produto %}
     <tr>
@@ -48,6 +49,7 @@ table#t01 {
       <td>{{ p.precoVenda}}</td>
       <td>{{ p.qtde}}</td>
       <td>{{ p.fornecedor}}</td>
+      <td>{{ p.dataCompra}}</td>
     </tr>
     {% endfor %}
   </table>
