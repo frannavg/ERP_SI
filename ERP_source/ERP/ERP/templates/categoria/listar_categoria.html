@@ -1,3 +1,4 @@
+{% load static %}
 <style>
 table, th, td {
   border: 1px solid black;
@@ -13,21 +14,38 @@ table#t01 {
 }
 </style>
 
-<div>
-    <h1><a href="/categoria/">Categoria</a></h1>
-</div>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{%static 'categoria/css/styles.css' %}"/>
+</head>
 
-<div>
-<table style="width:100%">
-  <tr BGCOLOR=SlateBlue>
-    <th>Codigo</th>
-    <th>Nome</th>
-  </tr>
-  {% for c in categoria %}
-  <tr>
-    <td>{{c.codigoCategoria}}</td>
-    <td>{{ c.name}}</td>
-  </tr>
-  {% endfor %}
-</table>
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="../../produto/">ERP</a>
+		<h3>Lista de Categorias</h3>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>
+
+  <div>
+  <table style="width:100%">
+    <tr BGCOLOR=SlateBlue>
+      <th>Codigo</th>
+      <th>Nome</th>
+    </tr>
+    {% for c in categoria %}
+    <tr>
+      <td>{{c.codigoCategoria}}</td>
+      <td>{{ c.name}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+
+  <div>
+		<h5><a href="../">Voltar</a></h5>
+	</div>
+
 </div>
+<script>src = "{static 'categoria/js/scripts.js' %}"</script>

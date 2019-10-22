@@ -1,3 +1,4 @@
+{% load static %}
 <style>
 table, th, td {
   border: 1px solid black;
@@ -13,31 +14,48 @@ table#t01 {
 }
 </style>
 
-<div>
-    <h1><a href="/produto/">Produto</a></h1>
-</div>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{%static 'produto/css/styles.css' %}">
+</head>
 
-<div>
-<table style="width:100%">
-  <tr BGCOLOR=SlateBlue>
-    <th>Codigo</th>
-    <th>Nome</th>
-    <th>Categoria</th>
-    <th>Preço de Compra</th>
-    <th>Preço de Venda</th>
-    <th>Quantidade</th>
-    <th>Fornecedor</th>
-  </tr>
-  {% for p in produto %}
-  <tr>
-    <td>{{p.codigoProduto}}</td>
-    <td>{{ p.name}}</td>
-    <td>{{ p.fkCategoria}}</td>
-    <td>{{ p.precoCompra}}</td>
-    <td>{{ p.precoVenda}}</td>
-    <td>{{ p.qtde}}</td>
-    <td>{{ p.fornecedor}}</td>
-  </tr>
-  {% endfor %}
-</table>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="..">ERP</a>
+        <h3>Lista de Produto</h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+  <div>
+  <table style="width:100%">
+    <tr BGCOLOR=SlateBlue>
+      <th>Codigo</th>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Preço de Compra</th>
+      <th>Preço de Venda</th>
+      <th>Quantidade</th>
+      <th>Fornecedor</th>
+    </tr>
+    {% for p in produto %}
+    <tr>
+      <td>{{p.codigoProduto}}</td>
+      <td>{{ p.name}}</td>
+      <td>{{ p.fkCategoria}}</td>
+      <td>{{ p.precoCompra}}</td>
+      <td>{{ p.precoVenda}}</td>
+      <td>{{ p.qtde}}</td>
+      <td>{{ p.fornecedor}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+
+  <div>
+      <h5><a href="../">Voltar</a></h5>
+  </div>
+
 </div>
+<script>src = "{static 'produto/js/scripts.js' %}"</script>
