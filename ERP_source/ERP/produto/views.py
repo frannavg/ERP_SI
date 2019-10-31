@@ -4,6 +4,10 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Produto
 from  .forms import PostProduto
+from .serializers import ProdutoSerializer
+from rest_framework import generics
+
+
 
 def post_list(request):
  return render(request, "produto/produto.html")
@@ -32,5 +36,10 @@ def insere_produto(request):
          form = PostProduto()
     return render(request, "produto/inserir.html",{'form': form})
 
+class ProdutoList(generics.ListCreateAPIView):
 
+    def get(self, request, format=None):
+        queryset = Produto.objects.all()
+        serializer_class = ProdutoSerializer
+        return Response(data=serializer_class.data, status=status.HTTP_200_OK)
 # Create your views here.
