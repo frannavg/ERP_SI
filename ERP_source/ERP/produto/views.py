@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django import forms
+from rest_framework.response import Response
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Produto
@@ -38,8 +39,7 @@ def insere_produto(request):
 
 class ProdutoList(generics.ListCreateAPIView):
 
-    def get(self, request, format=None):
         queryset = Produto.objects.all()
         serializer_class = ProdutoSerializer
-        return Response(data=serializer_class.data, status=status.HTTP_200_OK)
+        
 # Create your views here.
