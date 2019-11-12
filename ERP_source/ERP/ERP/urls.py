@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_jwt.views import obtain_jwt_token
 
 """ERP URL Configuration
 
@@ -21,7 +22,9 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('produto/', include('produto.urls')),
     path('categoria/', include('categoria.urls')),
-    path('', include('django.contrib.auth.urls'))
+    path('produto/', include('produto.urls')),
+    path('', include('django.contrib.auth.urls')),
+    path('token/', obtain_jwt_token),
+
 ]

@@ -44,7 +44,8 @@ def insere_produto(request):
 
 class ProdutoList(generics.ListCreateAPIView):
 
-        queryset = Produto.objects.all()
-        serializer_class = ProdutoSerializer
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
+
 
 # Create your views here.
