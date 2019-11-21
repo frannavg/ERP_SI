@@ -25,7 +25,7 @@ SECRET_KEY = 'u*2ynocqpw-as+vjg=p=+i$8g=yfuw(b$95+2z986144m-d-*7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['erp-si.herokuapp.com', 'localhost', '127.0.0.1']
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
