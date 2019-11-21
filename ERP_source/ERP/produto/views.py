@@ -7,7 +7,7 @@ from .models import Produto
 from  .forms import PostProduto
 from .serializers import ProdutoSerializer
 from rest_framework import generics
-
+from rest_framework.decorators import api_view, renderer_classes
 
 
 def post_list(request):
@@ -41,6 +41,7 @@ def insere_produto(request):
             return render(request, "produto/inserir.html",{'form': form})
     else:
         return HttpResponseRedirect('../../login')
+
 
 class ProdutoList(generics.ListCreateAPIView):
 

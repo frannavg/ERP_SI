@@ -26,5 +26,6 @@ urlpatterns = [
     path('produto/', include('produto.urls')),
     path('', include('django.contrib.auth.urls')),
     path('token/', obtain_jwt_token),
-    path('', include('produto.urls'))
+    path('', include('produto.urls')),
+    path('usuario/', include('usuario.urls')),
 ]
