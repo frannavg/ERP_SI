@@ -1,6 +1,15 @@
-{% block title %}Faça o login{% endblock %}
 {% block content %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
     <div class="container">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="">ERP</a>
+         </div>
         <h1>Faça o seu login</h1>
         <form action="." method="post">
             {% csrf_token %}
@@ -8,4 +17,5 @@
             <input class="btn btn-primary" type="submit" value="Login">
         </form>
     </div>
+</body>
 {% endblock %}

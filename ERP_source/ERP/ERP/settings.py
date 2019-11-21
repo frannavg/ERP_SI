@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 LOGIN_REDIRECT_URL = '../produto/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '../login/'
 
 
 REST_FRAMEWORK = {
