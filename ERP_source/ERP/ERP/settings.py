@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-SESSION_COOKIE_AGE = 1
+#SESSION_COOKIE_AGE = 1
 
 ROOT_URLCONF = 'ERP.urls'
 
