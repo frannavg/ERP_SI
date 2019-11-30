@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Diminui o tempo de vida da sessão para forçar o logout do usuário
 #SESSION_COOKIE_AGE = 1
 
 ROOT_URLCONF = 'ERP.urls'
